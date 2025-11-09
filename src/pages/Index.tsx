@@ -9,6 +9,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import PriceCalculator from '@/components/PriceCalculator';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -190,6 +191,16 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-5xl font-bold text-primary mb-4">Розрахунок вартості</h2>
+            <p className="text-xl text-muted-foreground">Дізнайтеся приблизну вартість ваших меблів за хвилину</p>
+          </div>
+          <PriceCalculator />
+        </div>
+      </section>
+
       <section id="about" className="py-20 px-6">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -231,7 +242,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="portfolio" className="py-20 px-6 bg-secondary/30">
+      <section id="portfolio" className="py-20 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-5xl font-bold text-primary mb-4">Портфоліо</h2>
@@ -265,7 +276,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="delivery" className="py-20 px-6">
+      <section id="delivery" className="py-20 px-6 bg-secondary/30">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-5xl font-bold text-primary mb-4">Доставка</h2>
@@ -302,7 +313,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 px-6 bg-secondary/30">
+      <section id="reviews" className="py-20 px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-5xl font-bold text-primary mb-4">Відгуки клієнтів</h2>
@@ -346,7 +357,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-6">
+      <section id="contacts" className="py-20 px-6 bg-secondary/30">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-5xl font-bold text-primary mb-4">Контакти</h2>

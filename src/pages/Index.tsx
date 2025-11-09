@@ -4,15 +4,32 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
+    setMobileMenuOpen(false);
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const menuItems = [
+    { id: 'home', label: 'Главная' },
+    { id: 'catalog', label: 'Каталог' },
+    { id: 'about', label: 'О фабрике' },
+    { id: 'portfolio', label: 'Портфолио' },
+    { id: 'delivery', label: 'Доставка' },
+    { id: 'reviews', label: 'Отзывы' },
+    { id: 'contacts', label: 'Контакты' },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -30,32 +47,59 @@ const Index = () => {
             </div>
 
             <nav className="hidden md:flex items-center space-x-8">
-              <button onClick={() => scrollToSection('home')} className="text-sm font-medium hover:text-accent transition-colors">
-                Главная
-              </button>
-              <button onClick={() => scrollToSection('catalog')} className="text-sm font-medium hover:text-accent transition-colors">
-                Каталог
-              </button>
-              <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-accent transition-colors">
-                О фабрике
-              </button>
-              <button onClick={() => scrollToSection('portfolio')} className="text-sm font-medium hover:text-accent transition-colors">
-                Портфолио
-              </button>
-              <button onClick={() => scrollToSection('delivery')} className="text-sm font-medium hover:text-accent transition-colors">
-                Доставка
-              </button>
-              <button onClick={() => scrollToSection('reviews')} className="text-sm font-medium hover:text-accent transition-colors">
-                Отзывы
-              </button>
-              <button onClick={() => scrollToSection('contacts')} className="text-sm font-medium hover:text-accent transition-colors">
-                Контакты
-              </button>
+              {menuItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-sm font-medium hover:text-accent transition-colors"
+                >
+                  {item.label}
+                </button>
+              ))}
             </nav>
 
-            <Button onClick={() => scrollToSection('contacts')} className="bg-accent hover:bg-accent/90 text-primary">
-              Связаться
-            </Button>
+            <div className="flex items-center gap-3">
+              <Button onClick={() => scrollToSection('contacts')} className="hidden sm:flex bg-accent hover:bg-accent/90 text-primary">
+                Связаться
+              </Button>
+
+              <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="md:hidden">
+                    <Icon name="Menu" size={24} />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                  <div className="flex flex-col gap-6 mt-8">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                        <span className="text-accent font-bold text-xl">GMM</span>
+                      </div>
+                      <div>
+                        <h2 className="text-xl font-bold text-primary">GiperMarketMebeli</h2>
+                        <p className="text-xs text-muted-foreground">Фабрика премиальной мебели</p>
+                      </div>
+                    </div>
+
+                    <nav className="flex flex-col gap-4">
+                      {menuItems.map((item) => (
+                        <button
+                          key={item.id}
+                          onClick={() => scrollToSection(item.id)}
+                          className="text-left text-lg font-medium hover:text-accent transition-colors py-2 border-b border-border"
+                        >
+                          {item.label}
+                        </button>
+                      ))}
+                    </nav>
+
+                    <Button onClick={() => scrollToSection('contacts')} className="bg-accent hover:bg-accent/90 text-primary mt-4">
+                      Связаться с нами
+                    </Button>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
       </header>

@@ -22,13 +22,13 @@ const Index = () => {
   };
 
   const menuItems = [
-    { id: 'home', label: 'Главная' },
+    { id: 'home', label: 'Головна' },
     { id: 'catalog', label: 'Каталог' },
-    { id: 'about', label: 'О фабрике' },
-    { id: 'portfolio', label: 'Портфолио' },
+    { id: 'about', label: 'Про фабрику' },
+    { id: 'portfolio', label: 'Портфоліо' },
     { id: 'delivery', label: 'Доставка' },
-    { id: 'reviews', label: 'Отзывы' },
-    { id: 'contacts', label: 'Контакты' },
+    { id: 'reviews', label: 'Відгуки' },
+    { id: 'contacts', label: 'Контакти' },
   ];
 
   return (
@@ -42,7 +42,7 @@ const Index = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-primary">GiperMarketMebeli</h1>
-                <p className="text-xs text-muted-foreground">Фабрика премиальной мебели</p>
+                <p className="text-xs text-muted-foreground">Фабрика преміальних меблів</p>
               </div>
             </div>
 
@@ -60,7 +60,7 @@ const Index = () => {
 
             <div className="flex items-center gap-3">
               <Button onClick={() => scrollToSection('contacts')} className="hidden sm:flex bg-accent hover:bg-accent/90 text-primary">
-                Связаться
+                Зв'язатися
               </Button>
 
               <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -77,7 +77,7 @@ const Index = () => {
                       </div>
                       <div>
                         <h2 className="text-xl font-bold text-primary">GiperMarketMebeli</h2>
-                        <p className="text-xs text-muted-foreground">Фабрика премиальной мебели</p>
+                        <p className="text-xs text-muted-foreground">Фабрика преміальних меблів</p>
                       </div>
                     </div>
 
@@ -94,7 +94,7 @@ const Index = () => {
                     </nav>
 
                     <Button onClick={() => scrollToSection('contacts')} className="bg-accent hover:bg-accent/90 text-primary mt-4">
-                      Связаться с нами
+                      Зв'язатися з нами
                     </Button>
                   </div>
                 </SheetContent>
@@ -109,25 +109,25 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
               <h2 className="text-6xl md:text-7xl font-bold text-primary leading-tight">
-                Создаём мебель вашей мечты
+                Створюємо меблі вашої мрії
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Премиальная мебель ручной работы с индивидуальным дизайном. 
-                Элегантность, качество и долговечность в каждой детали.
+                Преміальні меблі ручної роботи з індивідуальним дизайном. 
+                Елегантність, якість і довговічність у кожній деталі.
               </p>
               <div className="flex gap-4 pt-4">
                 <Button onClick={() => scrollToSection('catalog')} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Смотреть каталог
+                  Дивитися каталог
                 </Button>
                 <Button onClick={() => scrollToSection('contacts')} size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5">
-                  Заказать проект
+                  Замовити проєкт
                 </Button>
               </div>
             </div>
             <div className="relative h-[500px] animate-scale-in">
               <img 
                 src="https://cdn.poehali.dev/projects/5690b466-9ca4-4053-bed4-a4a9d561c8f8/files/6c048977-5b3c-4d0a-a079-9eb9f380397e.jpg"
-                alt="Премиальная мебель"
+                alt="Преміальні меблі"
                 className="w-full h-full object-cover rounded-2xl shadow-2xl"
               />
             </div>
@@ -138,27 +138,27 @@ const Index = () => {
       <section id="catalog" className="py-20 px-6 bg-secondary/30">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-5xl font-bold text-primary mb-4">Каталог мебели</h2>
-            <p className="text-xl text-muted-foreground">Откройте для себя коллекции премиального качества</p>
+            <h2 className="text-5xl font-bold text-primary mb-4">Каталог меблів</h2>
+            <p className="text-xl text-muted-foreground">Відкрийте для себе колекції преміальної якості</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Мягкая мебель',
-                description: 'Диваны, кресла, пуфы из натуральных материалов',
+                title: 'М\'які меблі',
+                description: 'Дивани, крісла, пуфи з натуральних матеріалів',
                 image: 'https://cdn.poehali.dev/projects/5690b466-9ca4-4053-bed4-a4a9d561c8f8/files/6c048977-5b3c-4d0a-a079-9eb9f380397e.jpg',
                 icon: 'Armchair'
               },
               {
-                title: 'Столовые группы',
-                description: 'Обеденные столы и стулья из массива дерева',
+                title: 'Обідні групи',
+                description: 'Обідні столи та стільці з масиву дерева',
                 image: 'https://cdn.poehali.dev/projects/5690b466-9ca4-4053-bed4-a4a9d561c8f8/files/83c73519-29eb-4863-99b5-fcbe45159cb8.jpg',
                 icon: 'Table'
               },
               {
-                title: 'Спальни',
-                description: 'Кровати, комоды, прикроватные тумбы',
+                title: 'Спальні',
+                description: 'Ліжка, комоди, прикроватні тумби',
                 image: 'https://cdn.poehali.dev/projects/5690b466-9ca4-4053-bed4-a4a9d561c8f8/files/d54f4bcc-8204-4d5a-a5ca-f446767a2a1b.jpg',
                 icon: 'Bed'
               }
@@ -181,7 +181,7 @@ const Index = () => {
                   </div>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                   <Button variant="link" className="mt-4 p-0 text-accent hover:text-accent/80">
-                    Подробнее <Icon name="ArrowRight" size={16} className="ml-2" />
+                    Детальніше <Icon name="ArrowRight" size={16} className="ml-2" />
                   </Button>
                 </CardContent>
               </Card>
@@ -194,18 +194,18 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
-              <h2 className="text-5xl font-bold text-primary">О фабрике</h2>
+              <h2 className="text-5xl font-bold text-primary">Про фабрику</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                GiperMarketMebeli — это более 15 лет опыта в создании премиальной мебели. 
-                Мы объединяем традиционное мастерство с современными технологиями, 
-                создавая изделия, которые служат десятилетиями.
+                GiperMarketMebeli — це понад 15 років досвіду у створенні преміальних меблів. 
+                Ми поєднуємо традиційну майстерність із сучасними технологіями, 
+                створюючи вироби, які служать десятиліттями.
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 {[
-                  { icon: 'Award', title: '15+ лет', subtitle: 'на рынке' },
-                  { icon: 'Users', title: '5000+', subtitle: 'довольных клиентов' },
-                  { icon: 'Package', title: '100%', subtitle: 'гарантия качества' },
-                  { icon: 'Truck', title: 'Бесплатная', subtitle: 'доставка' }
+                  { icon: 'Award', title: '15+ років', subtitle: 'на ринку' },
+                  { icon: 'Users', title: '5000+', subtitle: 'задоволених клієнтів' },
+                  { icon: 'Package', title: '100%', subtitle: 'гарантія якості' },
+                  { icon: 'Truck', title: 'Безкоштовна', subtitle: 'доставка' }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg">
                     <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
@@ -223,7 +223,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-accent/10 rounded-2xl -rotate-3" />
               <img 
                 src="https://cdn.poehali.dev/projects/5690b466-9ca4-4053-bed4-a4a9d561c8f8/files/83c73519-29eb-4863-99b5-fcbe45159cb8.jpg"
-                alt="О фабрике"
+                alt="Про фабрику"
                 className="relative w-full h-full object-cover rounded-2xl shadow-2xl"
               />
             </div>
@@ -234,8 +234,8 @@ const Index = () => {
       <section id="portfolio" className="py-20 px-6 bg-secondary/30">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-5xl font-bold text-primary mb-4">Портфолио</h2>
-            <p className="text-xl text-muted-foreground">Наши реализованные проекты</p>
+            <h2 className="text-5xl font-bold text-primary mb-4">Портфоліо</h2>
+            <p className="text-xl text-muted-foreground">Наші реалізовані проєкти</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -250,13 +250,13 @@ const Index = () => {
               <div key={index} className="group relative h-80 overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <img 
                   src={image}
-                  alt={`Проект ${index + 1}`}
+                  alt={`Проєкт ${index + 1}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
-                    <h4 className="text-white text-xl font-bold mb-2">Проект #{index + 1}</h4>
-                    <p className="text-white/80">Премиальная мебель на заказ</p>
+                    <h4 className="text-white text-xl font-bold mb-2">Проєкт #{index + 1}</h4>
+                    <p className="text-white/80">Преміальні меблі на замовлення</p>
                   </div>
                 </div>
               </div>
@@ -269,25 +269,25 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-5xl font-bold text-primary mb-4">Доставка</h2>
-            <p className="text-xl text-muted-foreground">Быстро и надёжно доставим вашу мебель</p>
+            <p className="text-xl text-muted-foreground">Швидко та надійно доставимо ваші меблі</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 icon: 'MapPin',
-                title: 'По всей России',
-                description: 'Доставляем в любой город'
+                title: 'По всій Україні',
+                description: 'Доставляємо в будь-яке місто'
               },
               {
                 icon: 'Clock',
-                title: '7-14 дней',
-                description: 'Средний срок доставки'
+                title: '7-14 днів',
+                description: 'Середній термін доставки'
               },
               {
                 icon: 'ShieldCheck',
-                title: 'Гарантия',
-                description: 'Страхование груза'
+                title: 'Гарантія',
+                description: 'Страхування вантажу'
               }
             ].map((item, index) => (
               <Card key={index} className="text-center p-8 border-0 shadow-lg animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -305,31 +305,31 @@ const Index = () => {
       <section id="reviews" className="py-20 px-6 bg-secondary/30">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-5xl font-bold text-primary mb-4">Отзывы клиентов</h2>
-            <p className="text-xl text-muted-foreground">Что говорят наши клиенты</p>
+            <h2 className="text-5xl font-bold text-primary mb-4">Відгуки клієнтів</h2>
+            <p className="text-xl text-muted-foreground">Що кажуть наші клієнти</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                name: 'Елена Иванова',
+                name: 'Олена Іванова',
                 rating: 5,
-                text: 'Заказывали спальню на фабрике GMM. Качество превзошло все ожидания! Мебель изготовлена из натурального дерева, все детали продуманы до мелочей.'
+                text: 'Замовляли спальню на фабриці GMM. Якість перевершила всі очікування! Меблі виготовлені з натурального дерева, всі деталі продумані до дрібниць.'
               },
               {
-                name: 'Дмитрий Петров',
+                name: 'Дмитро Петров',
                 rating: 5,
-                text: 'Отличная фабрика! Помогли с дизайн-проектом, учли все наши пожелания. Доставка точно в срок, сборка профессиональная. Рекомендую!'
+                text: 'Чудова фабрика! Допомогли з дизайн-проєктом, врахували всі наші побажання. Доставка точно в термін, збирання професійне. Рекомендую!'
               },
               {
                 name: 'Анна Смирнова',
                 rating: 5,
-                text: 'Купили обеденную группу — стол и стулья. Невероятное качество исполнения! Через год мебель выглядит как новая. Спасибо команде GMM!'
+                text: 'Купили обідню групу — стіл і стільці. Неймовірна якість виконання! Через рік меблі виглядають як нові. Дякуємо команді GMM!'
               },
               {
-                name: 'Михаил Соколов',
+                name: 'Михайло Соколов',
                 rating: 5,
-                text: 'Заказывали мягкую мебель для гостиной. Очень довольны результатом! Удобная, красивая, качественная. Цена полностью соответствует качеству.'
+                text: 'Замовляли м\'які меблі для вітальні. Дуже задоволені результатом! Зручні, красиві, якісні. Ціна повністю відповідає якості.'
               }
             ].map((review, index) => (
               <Card key={index} className="p-6 border-0 shadow-lg animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -349,8 +349,8 @@ const Index = () => {
       <section id="contacts" className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-5xl font-bold text-primary mb-4">Контакты</h2>
-            <p className="text-xl text-muted-foreground">Свяжитесь с нами для консультации</p>
+            <h2 className="text-5xl font-bold text-primary mb-4">Контакти</h2>
+            <p className="text-xl text-muted-foreground">Зв'яжіться з нами для консультації</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -361,7 +361,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-primary mb-1">Телефон</p>
-                  <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                  <p className="text-muted-foreground">+380 (44) 123-45-67</p>
                 </div>
               </div>
 
@@ -371,7 +371,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-primary mb-1">Email</p>
-                  <p className="text-muted-foreground">info@gipermarketmebeli.ru</p>
+                  <p className="text-muted-foreground">info@gipermarketmebeli.ua</p>
                 </div>
               </div>
 
@@ -380,8 +380,8 @@ const Index = () => {
                   <Icon name="MapPin" size={24} className="text-accent" />
                 </div>
                 <div>
-                  <p className="font-semibold text-primary mb-1">Адрес</p>
-                  <p className="text-muted-foreground">г. Москва, ул. Мебельная, д. 10</p>
+                  <p className="font-semibold text-primary mb-1">Адреса</p>
+                  <p className="text-muted-foreground">м. Київ, вул. Меблева, буд. 10</p>
                 </div>
               </div>
 
@@ -390,17 +390,17 @@ const Index = () => {
                   <Icon name="Clock" size={24} className="text-accent" />
                 </div>
                 <div>
-                  <p className="font-semibold text-primary mb-1">Режим работы</p>
-                  <p className="text-muted-foreground">Пн-Пт: 9:00 - 20:00<br />Сб-Вс: 10:00 - 18:00</p>
+                  <p className="font-semibold text-primary mb-1">Режим роботи</p>
+                  <p className="text-muted-foreground">Пн-Пт: 9:00 - 20:00<br />Сб-Нд: 10:00 - 18:00</p>
                 </div>
               </div>
             </div>
 
             <Card className="p-6 border-0 shadow-lg animate-scale-in">
-              <h3 className="text-2xl font-bold text-primary mb-6">Оставьте заявку</h3>
+              <h3 className="text-2xl font-bold text-primary mb-6">Залишіть заявку</h3>
               <form className="space-y-4">
                 <div>
-                  <Input placeholder="Ваше имя" className="border-border" />
+                  <Input placeholder="Ваше ім'я" className="border-border" />
                 </div>
                 <div>
                   <Input type="tel" placeholder="Телефон" className="border-border" />
@@ -409,10 +409,10 @@ const Index = () => {
                   <Input type="email" placeholder="Email" className="border-border" />
                 </div>
                 <div>
-                  <Textarea placeholder="Сообщение" rows={4} className="border-border" />
+                  <Textarea placeholder="Повідомлення" rows={4} className="border-border" />
                 </div>
                 <Button className="w-full bg-accent hover:bg-accent/90 text-primary">
-                  Отправить заявку
+                  Відправити заявку
                 </Button>
               </form>
             </Card>
@@ -430,39 +430,39 @@ const Index = () => {
                 </div>
                 <span className="font-bold text-lg">GiperMarketMebeli</span>
               </div>
-              <p className="text-sm text-primary-foreground/70">Фабрика премиальной мебели</p>
+              <p className="text-sm text-primary-foreground/70">Фабрика преміальних меблів</p>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Каталог</h4>
               <ul className="space-y-2 text-sm text-primary-foreground/70">
-                <li><a href="#" className="hover:text-accent transition-colors">Мягкая мебель</a></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Столовые группы</a></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Спальни</a></li>
+                <li><a href="#" className="hover:text-accent transition-colors">М'які меблі</a></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Обідні групи</a></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Спальні</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Информация</h4>
+              <h4 className="font-semibold mb-4">Інформація</h4>
               <ul className="space-y-2 text-sm text-primary-foreground/70">
-                <li><a href="#about" className="hover:text-accent transition-colors">О фабрике</a></li>
+                <li><a href="#about" className="hover:text-accent transition-colors">Про фабрику</a></li>
                 <li><a href="#delivery" className="hover:text-accent transition-colors">Доставка</a></li>
-                <li><a href="#reviews" className="hover:text-accent transition-colors">Отзывы</a></li>
+                <li><a href="#reviews" className="hover:text-accent transition-colors">Відгуки</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Контакты</h4>
+              <h4 className="font-semibold mb-4">Контакти</h4>
               <ul className="space-y-2 text-sm text-primary-foreground/70">
-                <li>+7 (495) 123-45-67</li>
-                <li>info@gipermarketmebeli.ru</li>
-                <li>г. Москва, ул. Мебельная, 10</li>
+                <li>+380 (44) 123-45-67</li>
+                <li>info@gipermarketmebeli.ua</li>
+                <li>м. Київ, вул. Меблева, 10</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/70">
-            <p>&copy; 2024 GiperMarketMebeli. Все права защищены.</p>
+            <p>&copy; 2024 GiperMarketMebeli. Усі права захищено.</p>
           </div>
         </div>
       </footer>
